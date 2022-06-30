@@ -37,6 +37,25 @@ function start() {
 
 function stop() {
     clearInterval(interval)
+
+    stopHistory.push({ "minute": minute, "second": second, "milliSecond": milliSecond });
+
+    // var column1 = document.createElement('td')
+
+
+    var historyItems = ""
+    for (var i = 0; i < stopHistory.length; i++) {
+        var row = document.createElement('tr')
+        var column1 = document.createElement('td')
+        var text = document.createTextNode(`${stopHistory[i].minute} ${stopHistory[i].second} ${stopHistory[i].milliSecond}`)
+        column1.appendChild(text)
+        row.appendChild(column1)
+        historyItems = row
+
+    }
+    var a = document.getElementById('hello')
+    a.appendChild(historyItems)
+
 }
 
 
@@ -59,26 +78,10 @@ function toggle() {
 function testing() {
     alert("button chal rha ha")
 }
+
+
 function reset() {
     clearInterval(interval)
-
-    stopHistory.push({ "minute": minute, "second": second, "milliSecond": milliSecond });
-    console.log(stopHistory)
-
-
-    var historyItems = ""
-    for (var i = 0; i < stopHistory.length; i++) {
-        historyItems += "<tr><th>" + stopHistory[i].minute + "</th>"
-        historyItems += "<th>" + stopHistory[i].second + "</th>"
-        historyItems += "<th>" + stopHistory[i].milliSecond + "</th>"
-
-        historyItems += "<th><button onClick='testing()'>delete</button> </th></tr>"
-
-
-    }
-    document.getElementById('hello').innerHTML = historyItems
-
-
 
     milliSecond = "00";
     getMilliSecond.innerHTML = milliSecond;
