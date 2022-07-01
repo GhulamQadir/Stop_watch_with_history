@@ -5,14 +5,42 @@ body {
     background-color: orange;
 }
 
-/* .container {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-} */
-
 h1 {
     display: inline-block;
     width: 100px;
     background-color: white;
 }
+
+
+.history_row {
+    background-color: cadetblue;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    height: 40px;
+    width: 100%;
+}
+
+table {
+    width: 300px;
+    border-collapse: collapse;
+
+}
+
+tr {
+    border-bottom: 1px solid black;
+
+}
+
+.delete_btn {
+    color: royalblue;
+    height: 25px;
+    padding: 4px 6px 4px 6px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+/* #history_row {
+    border-bottom: 5px red;
+} */
