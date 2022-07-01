@@ -81,6 +81,7 @@ function stop() {
 
 
         var index = document.createElement('td');
+        index.setAttribute('class', 'indexNumber')
         var indexNum = document.createTextNode(i + 1);
         index.appendChild(indexNum)
 
@@ -97,7 +98,7 @@ function stop() {
         delete_btn.appendChild(delete_btn_text);
         // delete_btn_td.appendChild(delete_btn)
         delete_btn.setAttribute("onclick", "deleteHistory(this)")
-        delete_btn.setAttribute("id", "delete_btn")
+        delete_btn.setAttribute("class", "delete_btn")
 
 
 
