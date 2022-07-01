@@ -86,29 +86,28 @@ function stop() {
 
         // time td
         var time = document.createElement('td')
+        time.setAttribute('class', 'table_cells')
         var timeText = document.createTextNode(`${saveHistory[i].minute} ${saveHistory[i].second} ${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 
         // delete_btn 
-        var delete_btn_td = document.createElement('td')
+        // var delete_btn_td = document.createElement('td')
         var delete_btn = document.createElement('button')
         var delete_btn_text = document.createTextNode("Delete")
         delete_btn.appendChild(delete_btn_text);
-        delete_btn_td.appendChild(delete_btn)
+        // delete_btn_td.appendChild(delete_btn)
         delete_btn.setAttribute("onclick", "deleteHistory(this)")
         delete_btn.setAttribute("id", "delete_btn")
 
-        // time.appendChild(dele)
 
 
 
         row.appendChild(index)
         row.appendChild(time)
-        row.appendChild(delete_btn_td)
+        row.appendChild(delete_btn)
 
 
         historyItems = row
-        // historyItems += hr
 
 
         row.setAttribute('class', 'history_row')

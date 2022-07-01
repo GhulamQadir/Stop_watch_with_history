@@ -31,16 +31,17 @@ tr {
 
 }
 
-.delete_btn {
-    color: royalblue;
+#delete_btn {
+    /* color: royalblue;
     height: 25px;
     padding: 4px 6px 4px 6px;
     flex-wrap: wrap;
     border-radius: 10px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 20px; */
+    margin: 10px 0px 10px 35px;
 }
 
-/* #history_row {
-    border-bottom: 5px red;
-} */
+.table_cells {
+    padding: 10px 0px 10px 60px;
+}
