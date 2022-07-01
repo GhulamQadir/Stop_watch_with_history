@@ -37,10 +37,34 @@ function start() {
 
 function stop() {
     clearInterval(interval)
+    var history_div = document.getElementById('history_div');
+    var table = document.getElementById('hello')
 
     saveHistory.push({ "minute": minute, "second": second, "milliSecond": milliSecond });
+    if (saveHistory.length === 1) {
+        var trHead = document.createElement('tr')
+        var indexHeading = document.createElement('th')
+        var timeHeading = document.createElement('th')
+        var actionHeading = document.createElement('th')
 
-    var history_div = document.getElementById('history_div');
+        var indexHeadingText = document.createTextNode('Index')
+        indexHeading.appendChild(indexHeadingText)
+
+
+        var timeHeadingText = document.createTextNode('Time')
+        timeHeading.appendChild(timeHeadingText)
+
+
+        var actionHeadingText = document.createTextNode('Action')
+        actionHeading.appendChild(actionHeadingText)
+
+        trHead.appendChild(indexHeading)
+        trHead.appendChild(timeHeading)
+        trHead.appendChild(actionHeading)
+
+        table.appendChild(trHead)
+    }
+
     if (saveHistory.length === 2) {
         var clear_all_btn = document.createElement('button');
         var clear_all_text = document.createTextNode('Clear history')
@@ -53,26 +77,36 @@ function stop() {
     var historyItems = ""
     for (var i = 0; i < saveHistory.length; i++) {
         var row = document.createElement('tr')
-        row.setAttribute('id','history_row')
+        row.setAttribute('id', 'history_row')
 
-        
+
+        var index = document.createElement('td');
+        var indexNum = document.createTextNode(i + 1);
+        index.appendChild(indexNum)
+
         // time td
         var time = document.createElement('td')
         var timeText = document.createTextNode(`${saveHistory[i].minute} ${saveHistory[i].second} ${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 
         // delete_btn 
+        var delete_btn_td = document.createElement('td')
         var delete_btn = document.createElement('button')
-        var text = document.createTextNode("Delete")
-        delete_btn.appendChild(text);
+        var delete_btn_text = document.createTextNode("Delete")
+        delete_btn.appendChild(delete_btn_text);
+        delete_btn_td.appendChild(delete_btn)
         delete_btn.setAttribute("onclick", "deleteHistory(this)")
         delete_btn.setAttribute("id", "delete_btn")
 
-        time.appendChild(delete_btn)
+        // time.appendChild(dele)
 
 
 
+        row.appendChild(index)
         row.appendChild(time)
+        row.appendChild(delete_btn_td)
+
+
         historyItems = row
         // historyItems += hr
 
@@ -80,7 +114,7 @@ function stop() {
         row.setAttribute('class', 'history_row')
 
     }
-    var table = document.getElementById('hello')
+    // var table = document.getElementById('hello')
     table.appendChild(historyItems)
 
 }
