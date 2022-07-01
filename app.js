@@ -98,9 +98,8 @@ function deleteHistory(e) {
 
 function clearHistory() {
     saveHistory.length = []
-    // var history_div = document.getElementById('history_div')
-    // var a = document.createElement('tr');
-    // history_div.appendChild(a)
+    var saved_history = document.getElementById('hello');
+    saved_history.innerHTML = ""
     console.log(saveHistory)
 }
 
