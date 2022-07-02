@@ -68,7 +68,7 @@ h1 {
 
 .head_div {
     background-color: azure;
-    height: 400px;
+    height: 430px;
     width: 100%;
     padding: 10px 10px 10px 10px;
     align-items: center;
@@ -90,7 +90,6 @@ h1 {
         padding: 6px 6px 6px 6px;
         width: 95%;
         margin: 15px;
-        /* margin-right: 10px; */
     }
 }
 
@@ -104,6 +103,51 @@ h1 {
     display: flex;
     align-items: center;
     text-align: center;
-    /* box-shadow: 5px 5px 5px 2px rgb(170, 177, 184); */
     box-shadow: 0px 0px 10px 5px rgb(222, 219, 219);
+}
+
+#start_stop {
+    margin: 27px 10px 5px 10px;
+    height: 38px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: rgb(36, 100, 101);
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 10px 5px rgb(222, 219, 219);
+}
+
+
+#start_stop:hover {
+    background-color: azure;
+    color: rgb(126, 197, 199);
+    border: 2px solid grey;
+}
+
+#reset_btn {
+    margin-top: 10px;
+    height: 38px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+    background-color: rgb(36, 100, 101);
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 10px 5px rgb(222, 219, 219);
+}
+
+
+#reset_btn:hover {
+    background-color: azure;
+    color: rgb(126, 197, 199);
+    border: 2px solid grey;
+}
+
+.toggle {
+    background-color: black;
+    color: white;
+
 }

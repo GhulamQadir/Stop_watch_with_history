@@ -39,8 +39,8 @@ function timer() {
 
 
 function start() {
-
     interval = setInterval(timer, 10)
+
 
 }
 
@@ -143,6 +143,7 @@ function toggle() {
         && getTitle.value.length != ""
     ) {
         clicked = true
+        start_stop.setAttribute('class', 'toggle')
         start_stop.innerHTML = "Stop"
         start();
         return;
