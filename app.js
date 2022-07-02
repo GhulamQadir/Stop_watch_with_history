@@ -11,6 +11,10 @@ var getSecond = document.getElementById('second')
 var getMilliSecond = document.getElementById('milliSecond')
 
 
+//input title
+var getTitle = document.getElementById('title_field')
+
+
 
 var interval = "";
 function timer() {
@@ -33,6 +37,7 @@ function timer() {
 
 function start() {
     interval = setInterval(timer, 10)
+
 }
 
 function stop() {
@@ -40,14 +45,15 @@ function stop() {
     var history_div = document.getElementById('history_div');
     var table = document.getElementById('hello')
 
-    saveHistory.push({ "minute": minute, "second": second, "milliSecond": milliSecond });
+    saveHistory.push({ "title": getTitle.value, "minute": minute, "second": second, "milliSecond": milliSecond });
+    console.log(saveHistory)
     if (saveHistory.length === 1) {
         var trHead = document.createElement('tr')
         var indexHeading = document.createElement('th')
         var timeHeading = document.createElement('th')
         var actionHeading = document.createElement('th')
 
-        var indexHeadingText = document.createTextNode('Index')
+        var indexHeadingText = document.createTextNode('Tile')
         indexHeading.appendChild(indexHeadingText)
 
 
@@ -80,10 +86,10 @@ function stop() {
         row.setAttribute('id', 'history_row')
 
 
-        var index = document.createElement('td');
-        index.setAttribute('class', 'indexNumber')
-        var indexNum = document.createTextNode(i + 1);
-        index.appendChild(indexNum)
+        var title = document.createElement('td');
+        title.setAttribute('class', 'title')
+        var titleText = document.createTextNode(saveHistory[i].title);
+        title.appendChild(titleText)
 
         // time td
         var time = document.createElement('td')
@@ -92,18 +98,17 @@ function stop() {
         time.appendChild(timeText)
 
         // delete_btn 
-        // var delete_btn_td = document.createElement('td')
         var delete_btn = document.createElement('button')
         var delete_btn_text = document.createTextNode("Delete")
         delete_btn.appendChild(delete_btn_text);
-        // delete_btn_td.appendChild(delete_btn)
+
         delete_btn.setAttribute("onclick", "deleteHistory(this)")
         delete_btn.setAttribute("class", "delete_btn")
 
 
 
 
-        row.appendChild(index)
+        row.appendChild(title)
         row.appendChild(time)
         row.appendChild(delete_btn)
 
@@ -121,7 +126,13 @@ function stop() {
 
 
 function toggle() {
-    if (!clicked) {
+    if (getTitle.value === "") {
+        alert("please write title")
+    }
+
+    if (!clicked
+        && getTitle.value.length != ""
+    ) {
         clicked = true
         start_stop.innerHTML = "Stop"
         start();

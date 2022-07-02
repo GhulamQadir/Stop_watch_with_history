@@ -45,9 +45,11 @@ h1 {
 }
 
 .table_cells {
+    color: white;
     padding: 10px 0px 10px 60px;
 }
 
-.indexNumber {
+.title {
+    color: white;
     padding: 10px 0px 10px 60px;
 }
