@@ -13,6 +13,9 @@ var getMilliSecond = document.getElementById('milliSecond')
 
 //input title
 var getTitle = document.getElementById('title_field')
+var history_div = document.getElementById('history_div');
+var table = document.getElementById('hello')
+
 
 
 
@@ -36,18 +39,24 @@ function timer() {
 
 
 function start() {
+
     interval = setInterval(timer, 10)
 
 }
 
 function stop() {
     clearInterval(interval)
-    var history_div = document.getElementById('history_div');
-    var table = document.getElementById('hello')
 
     saveHistory.push({ "title": getTitle.value, "minute": minute, "second": second, "milliSecond": milliSecond });
     console.log(saveHistory)
+
+
     if (saveHistory.length === 1) {
+        var historyHeading = document.createElement('h1');
+        var historyHeading_text = document.createTextNode('History')
+        historyHeading.appendChild(historyHeading_text);
+        history_div.appendChild(historyHeading)
+
         var trHead = document.createElement('tr')
         var indexHeading = document.createElement('th')
         var timeHeading = document.createElement('th')
@@ -70,6 +79,7 @@ function stop() {
 
         table.appendChild(trHead)
     }
+
 
     if (saveHistory.length === 2) {
         var clear_all_btn = document.createElement('button');
@@ -119,7 +129,6 @@ function stop() {
         row.setAttribute('class', 'history_row')
 
     }
-    // var table = document.getElementById('hello')
     table.appendChild(historyItems)
 
 }
@@ -148,14 +157,18 @@ function toggle() {
 }
 
 function deleteHistory(e) {
+    saveHistory.splice(this, 1)
     e.parentNode.remove();
+    if (saveHistory.length < 1) {
+        history_div.innerHTML = ""
+        table.innerHTML = ""
+    }
 }
 
 function clearHistory() {
     saveHistory.length = []
-    var saved_history = document.getElementById('hello');
-    saved_history.innerHTML = ""
-    console.log(saveHistory)
+    table.innerHTML = ""
+    history_div.innerHTML = ""
 }
 
 
