@@ -1,8 +1,11 @@
 body {
     max-width: max-content;
     margin: auto;
-    padding: 30px;
-    background-color: orange;
+    background-image: url('https://positiveroutines.com/wp-content/uploads/2018/10/diverse-hands-holding-cartoon-clocks-against-gray-background-time-concept.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -52,4 +55,41 @@ h1 {
 .title {
     color: white;
     padding: 10px 0px 10px 60px;
+}
+
+#title_field {
+    font-size: 20px;
+    height: 40px;
+    width: 90%;
+    padding-right: 10px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.head_div {
+    background-color: aquamarine;
+    height: 200px;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+@media screen and (max-width: 560px) {
+    .head_div {
+        padding: 6px 6px 6px 6px;
+        width: 90%;
+        margin: 15px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .head_div {
+        padding: 6px 6px 6px 6px;
+        width: 95%;
+        margin: 15px;
+        /* margin-right: 10px; */
+    }
 }

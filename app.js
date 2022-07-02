@@ -58,12 +58,12 @@ function stop() {
         history_div.appendChild(historyHeading)
 
         var trHead = document.createElement('tr')
-        var indexHeading = document.createElement('th')
+        var titledHeading = document.createElement('th')
         var timeHeading = document.createElement('th')
         var actionHeading = document.createElement('th')
 
-        var indexHeadingText = document.createTextNode('Tile')
-        indexHeading.appendChild(indexHeadingText)
+        var titleHeadingText = document.createTextNode('Tile')
+        titledHeading.appendChild(titleHeadingText)
 
 
         var timeHeadingText = document.createTextNode('Time')
@@ -73,7 +73,7 @@ function stop() {
         var actionHeadingText = document.createTextNode('Action')
         actionHeading.appendChild(actionHeadingText)
 
-        trHead.appendChild(indexHeading)
+        trHead.appendChild(titledHeading)
         trHead.appendChild(timeHeading)
         trHead.appendChild(actionHeading)
 

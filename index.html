@@ -11,24 +11,25 @@
 
 <body>
     <div class="container">
-        <input id="title_field" type="text" placeholder="Title" required="required" value="testing" />
-        <table class="table_head">
-            <tr id="head_row">
-                <th id="minute">00</th>
-                <th id="second">00</th>
-                <th id="milliSecond">00</th>
-            </tr>
-            <tr id="head_row">
+        <div class="head_div">
+            <input id="title_field" type="text" placeholder=" Title" required="required" value="testing" />
+            <table class="table_head">
+                <tr id="head_row">
+                    <th id="minute">00</th>
+                    <th id="second">00</th>
+                    <th id="milliSecond">00</th>
+                </tr>
+                <tr id="head_row">
 
-                <th>
-                    <h1><button id="start_stop" onclick="toggle()">Start</button></h1>
-                </th>
-                <th>
-                    <h1><button onclick="reset()">Clear</button></h1>
-                </th>
-            </tr>
-        </table>
-
+                    <th>
+                        <h1><button id="start_stop" onclick="toggle()">Start</button></h1>
+                    </th>
+                    <th>
+                        <h1><button onclick="reset()">Clear</button></h1>
+                    </th>
+                </tr>
+            </table>
+        </div>
         <div id="history_div">
         </div>
 
