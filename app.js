@@ -82,7 +82,7 @@ function stop() {
 
         // time td
         var time = document.createElement('td')
-        time.setAttribute('class', 'table_cells')
+        time.setAttribute('class', 'time')
         var timeText = document.createTextNode(`${saveHistory[i].minute} ${saveHistory[i].second} ${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 

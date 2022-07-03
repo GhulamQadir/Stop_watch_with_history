@@ -36,54 +36,41 @@ h1 {
 }
 
 
-/* .history_row {
-    background-color: cadetblue;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
-    height: 40px;
-    width: 100%;
-} */
 
 .table_head {
     border: none !important;
 }
 
-#head_row {
-    border: none;
-}
 
 table {
     margin-top: 40px;
-    width: 90% !important;
+    width: 80% !important;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     color: black !important;
-    /* border: 1px solid grey; */
-    background-color: white;
+    border-top: 2px solid grey;
 }
 
 td {
     text-align: center;
     height: 40px;
-    border-right: 2px solid grey;
     color: black !important;
 }
 
 
 .delete_btn {
     justify-content: center;
-    /* display: flex; */
     align-items: center;
     margin: auto;
     display: grid;
 }
 
-.table_cells {
-    color: white;
-    padding: 10px 0px 10px 60px;
+.time,
+.title {
+    background-color: none;
 }
 
 .title {
@@ -100,18 +87,19 @@ td {
     margin: 20px;
 }
 
-.head_div {
-    background-color: azure;
-    height: 430px;
-    width: 32% !important;
-    float: left;
-    padding: 10px 10px 10px 10px;
+.timer_div {
     margin: auto;
+    width: 32% !important;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+    height: 420px;
+    background-color: azure;
     border-radius: 10px;
 }
 
-@media screen and (max-width: 560px) {
-    .head_div {
+
+/* @media screen and (max-width: 560px) {
+    .timer_div {
         padding: 6px 6px 6px 6px;
         width: 90%;
         margin: 15px;
@@ -119,17 +107,17 @@ td {
 }
 
 @media screen and (min-width: 500px) {
-    .head_div {
+    .timer_div {
         padding: 6px 6px 6px 6px;
         width: 95%;
         margin: 15px;
     }
-}
+} */
 
 #stop_watch_div {
     margin-top: 20px;
     height: 170px;
-    width: 200px;
+    width: 60%;
     background-color: white;
     border-radius: 50%;
     justify-content: center;
@@ -137,6 +125,19 @@ td {
     align-items: center;
     text-align: center;
     box-shadow: 0px 0px 10px 5px rgb(222, 219, 219);
+}
+
+.timer_text {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 680px) {
+    #stop_watch_div {
+        margin-top: 10px;
+        height: 170px;
+        width: 98%;
+    }
 }
 
 #start_stop {

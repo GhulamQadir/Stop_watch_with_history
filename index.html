@@ -10,9 +10,24 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="head_div">
+    <div>
+        <div class="timer_div">
+
             <input id="title_field" type="text" placeholder=" Title" required="required" value="testing" />
+            <center>
+                <div id="stop_watch_div">
+                    <p class="timer_text" id="minute">00 :</p>
+                    <p class="timer_text" id="second">00 :</p>
+                    <p class="timer_text" id="milliSecond">00</p>
+                </div>
+
+                <button id="start_stop" onclick="toggle()">Start</button>
+                <br>
+                <button id="reset_btn" onclick="reset()">Reset</button>
+            </center>
+        </div>
+        <div class="head_div">
+            <!-- <input id="title_field" type="text" placeholder=" Title" required="required" value="testing" />
             <center>
                 <div id="stop_watch_div">
                     <h2 id="minute">00 :</h2>
@@ -23,7 +38,7 @@
                 <button id="start_stop" onclick="toggle()">Start</button>
                 <br>
                 <button id="reset_btn" onclick="reset()">Reset</button>
-            </center>
+            </center> -->
         </div>
     </div>
 
