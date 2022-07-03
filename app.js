@@ -57,28 +57,6 @@ function stop() {
         var historyHeading_text = document.createTextNode('History')
         historyHeading.appendChild(historyHeading_text);
         history_div.appendChild(historyHeading)
-
-        var trHead = document.createElement('tr')
-        var titledHeading = document.createElement('th')
-        var timeHeading = document.createElement('th')
-        var actionHeading = document.createElement('th')
-
-        var titleHeadingText = document.createTextNode('Tile')
-        titledHeading.appendChild(titleHeadingText)
-
-
-        var timeHeadingText = document.createTextNode('Time')
-        timeHeading.appendChild(timeHeadingText)
-
-
-        var actionHeadingText = document.createTextNode('Action')
-        actionHeading.appendChild(actionHeadingText)
-
-        trHead.appendChild(titledHeading)
-        trHead.appendChild(timeHeading)
-        trHead.appendChild(actionHeading)
-
-        table.appendChild(trHead)
     }
 
 
@@ -109,6 +87,7 @@ function stop() {
         time.appendChild(timeText)
 
         // delete_btn 
+
         var delete_btn = document.createElement('button')
         var delete_btn_text = document.createTextNode("Delete")
         delete_btn.appendChild(delete_btn_text);

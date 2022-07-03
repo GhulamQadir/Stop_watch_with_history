@@ -1,7 +1,8 @@
 body {
     /* max-width: max-content; */
     /* margin: auto; */
-    background-image: url('https://positiveroutines.com/wp-content/uploads/2018/10/diverse-hands-holding-cartoon-clocks-against-gray-background-time-concept.jpg');
+    background-color: #add8e6;
+    /* background-image: url('https://positiveroutines.com/wp-content/uploads/2018/10/diverse-hands-holding-cartoon-clocks-against-gray-background-time-concept.jpg'); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -35,13 +36,13 @@ h1 {
 }
 
 
-.history_row {
+/* .history_row {
     background-color: cadetblue;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 10px 10px;
     height: 40px;
     width: 100%;
-}
+} */
 
 .table_head {
     border: none !important;
@@ -52,26 +53,32 @@ h1 {
 }
 
 table {
-    width: 100% !important;
-    background-color: green;
-}
-
-/* #hello {
-    width: 100% !important;
-    border-collapse: collapse;
+    margin-top: 40px;
+    width: 90% !important;
     align-items: center;
     justify-content: center;
-} */
-
-
-#history_row {
-    width: 100%;
-    border-bottom: 1px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black !important;
+    /* border: 1px solid grey; */
+    background-color: white;
 }
 
+td {
+    text-align: center;
+    height: 40px;
+    border-right: 2px solid grey;
+    color: black !important;
+}
+
+
 .delete_btn {
-    color: royalblue;
-    margin: 10px 0px 10px 80px;
+    justify-content: center;
+    /* display: flex; */
+    align-items: center;
+    margin: auto;
+    display: grid;
 }
 
 .table_cells {
