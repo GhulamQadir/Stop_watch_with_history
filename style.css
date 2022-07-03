@@ -1,6 +1,6 @@
 body {
-    max-width: max-content;
-    margin: auto;
+    /* max-width: max-content; */
+    /* margin: auto; */
     background-image: url('https://positiveroutines.com/wp-content/uploads/2018/10/diverse-hands-holding-cartoon-clocks-against-gray-background-time-concept.jpg');
     background-position: center center;
     background-repeat: no-repeat;
@@ -12,6 +12,26 @@ h1 {
     display: inline-block;
     width: 100px;
     background-color: white;
+}
+
+
+.column {
+    float: left;
+    width: 23%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 100% !important;
 }
 
 
@@ -31,10 +51,17 @@ h1 {
     border: none;
 }
 
-#hello {
-    width: 500px !important;
-    border-collapse: collapse;
+table {
+    width: 100% !important;
+    background-color: green;
 }
+
+/* #hello {
+    width: 100% !important;
+    border-collapse: collapse;
+    align-items: center;
+    justify-content: center;
+} */
 
 
 #history_row {
@@ -69,12 +96,11 @@ h1 {
 .head_div {
     background-color: azure;
     height: 430px;
-    width: 100%;
+    width: 32% !important;
+    float: left;
     padding: 10px 10px 10px 10px;
-    align-items: center;
-    text-align: center;
+    margin: auto;
     border-radius: 10px;
-    margin: 30px;
 }
 
 @media screen and (max-width: 560px) {

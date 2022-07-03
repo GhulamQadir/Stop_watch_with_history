@@ -25,13 +25,14 @@ function timer() {
     getMilliSecond.innerHTML = milliSecond;
     if (milliSecond === 100) {
         second++;
-        getSecond.innerHTML = second;
+        getSecond.innerHTML = `${second} :`;
         milliSecond = "00";
+
         getMilliSecond.innerHTML = milliSecond
     }
-    else if (second === 60) {
+    else if (second === 10) {
         minute++;
-        getMinute.innerHTML = minute
+        getMinute.innerHTML = `${minute} :`
         second = "00";
         getSecond.innerHTML = second
     }
@@ -179,10 +180,10 @@ function reset() {
     milliSecond = "00";
     getMilliSecond.innerHTML = milliSecond;
 
-    second = "00";
+    second = "00 :";
     getSecond.innerHTML = second;
 
-    minute = "00";
+    minute = "00 :";
     getMinute.innerHTML = minute
 
     clicked = false
