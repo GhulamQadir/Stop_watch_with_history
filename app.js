@@ -51,10 +51,10 @@ function stop() {
     saveHistory.push({ "title": getTitle.value, "minute": minute, "second": second, "milliSecond": milliSecond });
     console.log(saveHistory)
 
-
     if (saveHistory.length === 1) {
-        var historyHeading = document.createElement('h1');
+        var historyHeading = document.createElement('p');
         var historyHeading_text = document.createTextNode('History')
+        historyHeading.setAttribute('class', 'history_heading')
         historyHeading.appendChild(historyHeading_text);
         history_div.appendChild(historyHeading)
     }
@@ -64,6 +64,7 @@ function stop() {
         var clear_all_btn = document.createElement('button');
         var clear_all_text = document.createTextNode('Clear history')
         clear_all_btn.setAttribute('onclick', 'clearHistory()')
+        clear_all_btn.setAttribute('class', 'clearHistory')
         clear_all_btn.appendChild(clear_all_text)
         history_div.appendChild(clear_all_btn)
     }
@@ -83,7 +84,7 @@ function stop() {
         // time td
         var time = document.createElement('td')
         time.setAttribute('class', 'time')
-        var timeText = document.createTextNode(`${saveHistory[i].minute} ${saveHistory[i].second} ${saveHistory[i].milliSecond}`)
+        var timeText = document.createTextNode(`${saveHistory[i].minute} :${saveHistory[i].second} :${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 
         // delete_btn 
@@ -102,7 +103,7 @@ function stop() {
 
         row.appendChild(title)
         row.appendChild(time)
-        row.appendChild(delete_btn_td   )
+        row.appendChild(delete_btn_td)
 
 
         historyItems = row
@@ -118,7 +119,7 @@ function stop() {
 
 function toggle() {
     if (getTitle.value === "") {
-        alert("please write title")
+        alert("Please write title")
     }
 
     if (!clicked
@@ -169,6 +170,8 @@ function reset() {
 
     clicked = false
     start_stop.innerHTML = "Start"
+
+    getTitle.value = ""
 
 }
 

@@ -43,8 +43,8 @@ h1 {
 
 
 table {
-    margin-top: 40px;
-    width: 80% !important;
+    margin-top: 20px;
+    width: 90% !important;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -53,6 +53,8 @@ table {
     color: black !important;
     border-top: 2px solid grey;
 }
+
+
 
 td {
     text-align: center;
@@ -177,5 +179,45 @@ td {
 .toggle {
     background-color: black;
     color: white;
+}
 
+#history_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.history_heading {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-right: 10px;
+}
+
+.clearHistory {
+    margin-left: 30px;
+    font-size: 20px !important;
+    border-radius: 20px;
+    background-color: rgb(217, 98, 98);
+    color: white;
+    border: 1px solid grey;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: monospace;
+    color: white;
+}
+
+.time {
+    font-size: 22px;
+}
+
+.delete_btn {
+    color: white;
+    background-color: red;
+    font-size: 17px;
+    border-radius: 20px;
 }
