@@ -6,15 +6,20 @@ var clicked = false;
 var saveHistory = [];
 
 
+// getting minutes, seconds amd milliseconds
 var getMinute = document.getElementById('minute')
 var getSecond = document.getElementById('second')
 var getMilliSecond = document.getElementById('milliSecond')
 
 
-//input title
+// input field value(title)
 var getTitle = document.getElementById('title_field')
+
+// history div
 var history_div = document.getElementById('history_div');
-var table = document.getElementById('hello')
+
+// history table
+var historyTable = document.getElementById('history_table')
 
 
 
@@ -30,7 +35,7 @@ function timer() {
 
         getMilliSecond.innerHTML = milliSecond
     }
-    else if (second === 10) {
+    else if (second === 60) {
         minute++;
         getMinute.innerHTML = `${minute} :`
         second = "00";
@@ -72,8 +77,8 @@ function stop() {
 
     var historyItems = ""
     for (var i = 0; i < saveHistory.length; i++) {
-        var row = document.createElement('tr')
-        row.setAttribute('id', 'history_row')
+        var tableRow = document.createElement('tr')
+        tableRow.setAttribute('id', 'history_row')
 
 
         var title = document.createElement('td');
@@ -87,8 +92,8 @@ function stop() {
         var timeText = document.createTextNode(`${saveHistory[i].minute} :${saveHistory[i].second} :${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 
-        // delete_btn 
 
+        // delete_btn td 
         var delete_btn_td = document.createElement('td')
         var delete_btn = document.createElement('button')
         var delete_btn_text = document.createTextNode("Delete")
@@ -101,18 +106,14 @@ function stop() {
 
 
 
-        row.appendChild(title)
-        row.appendChild(time)
-        row.appendChild(delete_btn_td)
+        tableRow.appendChild(title)
+        tableRow.appendChild(time)
+        tableRow.appendChild(delete_btn_td)
 
-
-        historyItems = row
-
-
-        row.setAttribute('class', 'history_row')
+        historyItems = tableRow
 
     }
-    table.appendChild(historyItems)
+    historyTable.appendChild(historyItems)
 
 }
 
@@ -145,13 +146,13 @@ function deleteHistory(e) {
     e.parentNode.remove();
     if (saveHistory.length < 1) {
         history_div.innerHTML = ""
-        table.innerHTML = ""
+        historyTable.innerHTML = ""
     }
 }
 
 function clearHistory() {
     saveHistory.length = []
-    table.innerHTML = ""
+    historyTable.innerHTML = ""
     history_div.innerHTML = ""
 }
 

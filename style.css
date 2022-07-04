@@ -1,83 +1,27 @@
 body {
-    /* max-width: max-content; */
-    /* margin: auto; */
     background-color: #add8e6;
-    /* background-image: url('https://positiveroutines.com/wp-content/uploads/2018/10/diverse-hands-holding-cartoon-clocks-against-gray-background-time-concept.jpg'); */
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-h1 {
-    display: inline-block;
-    width: 100px;
-    background-color: white;
-}
+/* top heading styling */
 
-
-.column {
-    float: left;
-    width: 23%;
-    padding: 10px;
-    height: 300px;
-    /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.container {
-    width: 100% !important;
-}
-
-
-
-.table_head {
-    border: none !important;
-}
-
-
-table {
-    margin-top: 20px;
-    width: 90% !important;
-    align-items: center;
-    justify-content: center;
+.main_heading {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    color: black !important;
-    border-top: 2px solid grey;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: serif;
+    color: azure;
 }
 
+/* end */
 
 
-td {
-    text-align: center;
-    height: 40px;
-    color: black !important;
-}
 
 
-.delete_btn {
-    margin: auto;
-    display: block;
-}
-
-.time,
-.title {
-    background-color: none;
-}
-
-.title {
-    color: white;
-    padding: 10px 0px 10px 60px;
-}
-
+/* input field styling */
 #title_field {
     font-size: 20px;
     height: 33px;
@@ -87,6 +31,10 @@ td {
     margin: 20px;
 }
 
+/* end */
+
+
+/* main div styling */
 .timer_div {
     margin: auto;
     width: 32% !important;
@@ -109,7 +57,12 @@ td {
     }
 }
 
+/* end */
 
+
+
+
+/* stop watch(00:00:00) styling */
 #stop_watch_div {
     margin-top: 20px;
     height: 170px;
@@ -181,6 +134,12 @@ td {
     color: white;
 }
 
+/* stop watch styling end */
+
+
+
+
+/* history heading and clear btn div (styling) */
 #history_div {
     display: flex;
     justify-content: center;
@@ -204,6 +163,41 @@ td {
     border: 1px solid grey;
 }
 
+/* end */
+
+
+
+
+
+/* history table styling */
+.table_head {
+    border: none !important;
+}
+
+
+table {
+    margin-top: 20px;
+    width: 90% !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: black !important;
+    border-top: 2px solid grey;
+}
+
+td {
+    text-align: center;
+    height: 40px;
+    color: black !important;
+}
+
+.delete_btn {
+    margin: auto;
+    display: block;
+}
+
 .title {
     font-size: 24px;
     font-weight: 600;
@@ -222,10 +216,4 @@ td {
     border-radius: 20px;
 }
 
-.main_heading {
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    font-family: serif;
-    color: azure;
-}
+/* end */
