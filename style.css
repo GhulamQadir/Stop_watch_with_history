@@ -221,3 +221,11 @@ td {
     font-size: 17px;
     border-radius: 20px;
 }
+
+.main_heading {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: serif;
+    color: azure;
+}
