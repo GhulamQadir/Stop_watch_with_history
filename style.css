@@ -80,7 +80,7 @@ td {
 
 #title_field {
     font-size: 20px;
-    height: 40px;
+    height: 33px;
     width: 90%;
     border-radius: 5px;
     border: 1.5px solid grey;
@@ -90,7 +90,6 @@ td {
 .timer_div {
     margin: auto;
     width: 32% !important;
-    /* border: 3px solid #73AD21; */
     padding: 10px;
     height: 420px;
     background-color: azure;
@@ -98,21 +97,17 @@ td {
 }
 
 
-/* @media screen and (max-width: 560px) {
+@media screen and (max-width: 680px) {
     .timer_div {
         padding: 6px 6px 6px 6px;
-        width: 90%;
+        width: 90% !important;
         margin: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
-@media screen and (min-width: 500px) {
-    .timer_div {
-        padding: 6px 6px 6px 6px;
-        width: 95%;
-        margin: 15px;
-    }
-} */
 
 #stop_watch_div {
     margin-top: 20px;
@@ -136,7 +131,7 @@ td {
     #stop_watch_div {
         margin-top: 10px;
         height: 170px;
-        width: 98%;
+        width: 70%;
     }
 }
 
