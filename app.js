@@ -88,9 +88,11 @@ function stop() {
 
         // delete_btn 
 
+        var delete_btn_td = document.createElement('td')
         var delete_btn = document.createElement('button')
         var delete_btn_text = document.createTextNode("Delete")
         delete_btn.appendChild(delete_btn_text);
+        delete_btn_td.appendChild(delete_btn)
 
         delete_btn.setAttribute("onclick", "deleteHistory(this)")
         delete_btn.setAttribute("class", "delete_btn")
@@ -100,7 +102,7 @@ function stop() {
 
         row.appendChild(title)
         row.appendChild(time)
-        row.appendChild(delete_btn)
+        row.appendChild(delete_btn_td   )
 
 
         historyItems = row
