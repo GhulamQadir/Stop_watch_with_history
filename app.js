@@ -41,6 +41,16 @@ function timer() {
         second = "00";
         getSecond.innerHTML = second
     }
+
+    if (milliSecond < 10) {
+        getMilliSecond.innerHTML = `0${milliSecond}`
+    }
+    else if (second < 10) {
+        getSecond.innerHTML = `0${second} :`
+    }
+    else if (minute < 10) {
+        getMinute.innerHTML = `0${minute} :`
+    }
 }
 
 
@@ -53,7 +63,7 @@ function start() {
 function stop() {
     clearInterval(interval)
 
-    saveHistory.push({ "title": getTitle.value, "minute": minute, "second": second, "milliSecond": milliSecond });
+    saveHistory.push({ "title": getTitle.value, "minute": getMinute.innerHTML, "second": getSecond.innerHTML, "milliSecond": getMilliSecond.innerHTML });
     console.log(saveHistory)
 
     if (saveHistory.length === 1) {
@@ -89,7 +99,7 @@ function stop() {
         // time td
         var time = document.createElement('td')
         time.setAttribute('class', 'time')
-        var timeText = document.createTextNode(`${saveHistory[i].minute} :${saveHistory[i].second} :${saveHistory[i].milliSecond}`)
+        var timeText = document.createTextNode(`${saveHistory[i].minute}${saveHistory[i].second}${saveHistory[i].milliSecond}`)
         time.appendChild(timeText)
 
 
@@ -142,7 +152,7 @@ function toggle() {
 }
 
 function deleteHistory(e) {
-    saveHistory.splice(this, 1)
+    saveHistory.splice(e, 1)
     e.parentNode.remove();
     if (saveHistory.length < 1) {
         history_div.innerHTML = ""
@@ -160,14 +170,15 @@ function clearHistory() {
 function reset() {
     clearInterval(interval)
 
-    milliSecond = "00";
-    getMilliSecond.innerHTML = milliSecond;
+    milliSecond = 00;
+    second = 00;
+    minute = 00;
 
-    second = "00 :";
-    getSecond.innerHTML = second;
+    getMilliSecond.innerHTML = "00";
 
-    minute = "00 :";
-    getMinute.innerHTML = minute
+    getSecond.innerHTML = "00 :";
+
+    getMinute.innerHTML = "00 :";
 
     clicked = false
     start_stop.innerHTML = "Start"
