@@ -152,12 +152,14 @@ function toggle() {
 }
 
 function deleteHistory(e) {
-    saveHistory.splice(e, 1)
-    e.parentNode.remove();
+    e.parentNode.parentNode.remove();
+    saveHistory.splice(this, 1)
+
     if (saveHistory.length < 1) {
         history_div.innerHTML = ""
         historyTable.innerHTML = ""
     }
+    console.log(saveHistory)
 }
 
 function clearHistory() {
