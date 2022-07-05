@@ -31,33 +31,48 @@ function timer() {
     if (milliSecond === 100) {
         second++;
         getSecond.innerHTML = `${second} :`;
-        milliSecond = "00";
+        milliSecond = "0";
 
         getMilliSecond.innerHTML = milliSecond
     }
     else if (second === 60) {
         minute++;
         getMinute.innerHTML = `${minute} :`
-        second = "00";
+        second = "0";
         getSecond.innerHTML = second
-    }
+        if (second === "0" && minute < 10) {
+            getMinute.innerHTML = `0${minute} :`
 
+        }
+    }
+    // milliseconds control
     if (milliSecond < 10) {
         getMilliSecond.innerHTML = `0${milliSecond}`
-    }
-    else if (second < 10) {
         getSecond.innerHTML = `0${second} :`
     }
+
+    // seconds control
+    else if (second < 10) {
+        getSecond.innerHTML = `0${second} :`
+        getMinute.innerHTML = `0${minute} :`
+    }
+    if (second > 9) {
+        getSecond.innerHTML = `${second} :`
+    }
+
+    // minutes control
     else if (minute < 10) {
         getMinute.innerHTML = `0${minute} :`
     }
+    if (minute > 9) {
+        getMinute.innerHTML = `${minute} :`
+    }
+
 }
 
 
 function start() {
     interval = setInterval(timer, 10)
-
-
 }
 
 function stop() {
